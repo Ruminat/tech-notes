@@ -25,11 +25,11 @@
 - Screenshots — [Lightshot](https://app.prntscr.com) (also available on Mac, but I didn't need it there).
 - Create bootable USB's — [Rufus](https://rufus.ie).
 - Remove a boot entry — [Bootice](https://www.softportal.com/en/bootice/windows/software).
-- Change keyboard layout on CapsLock — [AutoHotKey](https://www.autohotkey.com) (+ CapsLock.ahk)
+- Change keyboard layout on CapsLock — [AutoHotKey](https://www.autohotkey.com) (+ CapsLock.ahk).
 - Make your desktop prettier — [Rainmeter](https://www.rainmeter.net).
 
 ### Mac
 
-- Video player — [MPC-HC](https://mpc-hc.org).
+- Video player — [VLC](https://www.videolan.org/vlc/download-macosx.ast.html).
 - Change windows layout with keyboard — [Spectacle](https://github.com/eczarny/spectacle).
 - Launch apps on `cmd` + `1`, `cmd` + `2` and so on (as `win` + `number` on Windows) — [snap](https://apps.apple.com/ru/app/snap/id418073146?mt=12).
