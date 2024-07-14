@@ -1,6 +1,6 @@
 # Ruminat tech notes
 
-## Awesome software
+## Awesome software/services
 
 ### Cross-platform
 
@@ -8,7 +8,7 @@
 - Messenger — [Telegram](https://desktop.telegram.org).
 - Cloud storage — [Google Drive](https://drive.google.com) and [Mega](https://mega.io).
 - Games — [Steam](https://store.steampowered.com).
-- Code editor / IDE — [Sublime Text](https://www.sublimetext.com) and [VS Code](https://code.visualstudio.com).
+- Code editor / IDE — [Sublime Text](https://www.sublimetext.com) + [my customizations](./Software/SublimeText.md) and [VS Code](https://code.visualstudio.com) + [my customizations](./Software/VSCode.md).
 - Everything related to maths — [Mathematica](https://www.wolfram.com/mathematica).
 - Markdown editor — I liked [Typora](https://typora.io/) when it was free, now I just use [Notion](https://www.notion.so).
 - [LaTeX](https://www.google.com/search?q=what+is+LaTeX) — [TeXlive](https://www.tug.org/texlive).
