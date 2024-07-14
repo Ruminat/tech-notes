@@ -21,7 +21,7 @@
 - Video player — [MPC-HC](https://mpc-hc.org).
 - Music player — [MusicBee](https://www.getmusicbee.com).
 - File manager — [Double Commander](https://doublecmd.sourceforge.io) (it's cross-platform, but I only like the Windows version).
-- [Spotlight](https://www.google.com/search?q=Mac%27s+Spotlight) alternative — [Keypirinha](https://keypirinha.com).
+- [Spotlight](https://www.google.com/search?q=Mac%27s+Spotlight) alternative — [Keypirinha](https://keypirinha.com) ([my customizations](./software/Keypirinha.md)).
 - Screenshots — [Lightshot](https://app.prntscr.com) (also available on Mac, but I didn't need it there).
 - Create bootable USB's — [Rufus](https://rufus.ie).
 - Remove a boot entry — [Bootice](https://www.softportal.com/en/bootice/windows/software).
