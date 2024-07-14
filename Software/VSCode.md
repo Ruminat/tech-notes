@@ -58,7 +58,7 @@ My settings:
 
 My keyboard shortcuts:
 
-```json
+```javascript
 [
   {
     "key": "ctrl+tab",
