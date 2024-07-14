@@ -12,4 +12,4 @@ Recommended [packages](https://keypirinha.com/contributions.html):
 - [My IP](https://github.com/Fuhrmann/keypirinha-myip).
 - [URL shortener](https://github.com/Fuhrmann/keypirinha-url-shortener).
 
-You should also [add it to startup](../cmd/AddToStartup.md).
+You should also [add it to startup](../Windows/AddToStartup.md).
