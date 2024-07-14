@@ -2,7 +2,7 @@
 
 My settings:
 
-```json
+```javascript
 {
   "editor.fontSize": 12,
   "editor.fontFamily": "JetBrains Mono Regular",
