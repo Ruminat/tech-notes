@@ -13,7 +13,7 @@
 - Markdown editor — I liked [Typora](https://typora.io/) when it was free, now I just use [Notion](https://www.notion.so).
 - [LaTeX](https://www.google.com/search?q=what+is+LaTeX) — [TeXlive](https://www.tug.org/texlive).
 
-## Windows
+### Windows
 
 - Image viewer — [IrfanView](https://www.irfanview.com) with plugins.
 - PDF/fb2 viewer — [SumatraPDF](https://www.sumatrapdfreader.org).
