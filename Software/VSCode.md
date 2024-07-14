@@ -1,6 +1,6 @@
 ### VS Code
 
-My settings:
+**My settings**:
 
 ```javascript
 {
@@ -56,7 +56,7 @@ My settings:
 }
 ```
 
-My keyboard shortcuts:
+**My keyboard shortcuts**:
 
 ```javascript
 [
@@ -75,7 +75,7 @@ My keyboard shortcuts:
 ]
 ```
 
-My favorite packages:
+**My favorite packages**:
 
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme).

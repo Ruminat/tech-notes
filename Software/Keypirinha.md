@@ -1,6 +1,6 @@
 ### Keypirinha
 
-My settings (`C:\Program Files\Keypirinha\portable\Profile\User\`):
+**My settings** (`C:\Program Files\Keypirinha\portable\Profile\User\`):
 
 ```
 [app]

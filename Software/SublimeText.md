@@ -1,6 +1,6 @@
 ### Sublime text
 
-My settings:
+**My settings**:
 
 ```javascript
 {
@@ -61,7 +61,7 @@ My settings:
 }
 ```
 
-My keyboard shortcuts:
+**My keyboard shortcuts**:
 
 ```javascript
 [
@@ -80,7 +80,7 @@ My keyboard shortcuts:
 ]
 ```
 
-My favorite packages:
+**My favorite packages**:
 
 - [Transcrypt](https://packagecontrol.io/packages/Transcrypt).
 - [ToDone](https://packagecontrol.io/packages/ToDone).
