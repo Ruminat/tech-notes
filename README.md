@@ -10,7 +10,7 @@
 - Games — [Steam](https://store.steampowered.com).
 - Code editor / IDE — [Sublime Text](https://www.sublimetext.com) + [my customizations](./Software/SublimeText.md) and [VS Code](https://code.visualstudio.com) + [my customizations](./Software/VSCode.md).
 - Everything related to maths — [Mathematica](https://www.wolfram.com/mathematica).
-- Markdown editor — I liked [Typora](https://typora.io/) when it was free, now I just use N̶o̶t̶i̶o̶n̶ [Yonote](https://yonote.ru/).
+- Markdown editor — I liked [Typora](https://typora.io/) when it was free, now I just use ~~Notion~~ [Yonote](https://yonote.ru/).
 - [LaTeX](https://www.google.com/search?q=what+is+LaTeX) — [TeXlive](https://www.tug.org/texlive).
 
 ### Windows
