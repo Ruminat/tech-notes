@@ -40,3 +40,4 @@
 ## Some other stuff
 
 - [My favorite fonts](./Random/Fonts.md).
+- [My favorite games](./Random/Games.md).
