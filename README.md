@@ -15,6 +15,8 @@
 
 ### Windows
 
+Here's a ready-to-use [start guide](./Windows/FreshStart.md).
+
 - Image viewer — [IrfanView](https://www.irfanview.com) with plugins.
 - PDF/fb2 viewer — [SumatraPDF](https://www.sumatrapdfreader.org).
 - djvu viewer — [WinDjView](https://windjview.sourceforge.io).
