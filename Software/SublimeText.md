@@ -34,7 +34,6 @@
     "*.run.xml",
     "*.ini",
     "*.exe",
-    "*.exe",
     "*.filters",
     "*.db",
     "*.sln",

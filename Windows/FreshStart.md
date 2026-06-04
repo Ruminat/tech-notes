@@ -1,4 +1,4 @@
-# My fresh start guide on windows
+# My fresh start guide on Windows
 
 Start with installing [choco](https://chocolatey.org/install):
 ```bash
