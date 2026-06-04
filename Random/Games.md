@@ -7,6 +7,8 @@
 | [Terraria](https://store.steampowered.com/app/105600/Terraria/)                                  | 9/10      |
 | [World of Warcraft](https://worldofwarcraft.blizzard.com)                                        | 9/10      |
 | [Grand Theft Auto: San Andreas](https://www.rockstargames.com/games/sanandreas)                  | 8/10      |
+| [Vampire Survivors](https://store.steampowered.com/app/1794680/Vampire_Survivors)                | 8/10      |
+| [Brotato](https://store.steampowered.com/app/1942280/Brotato)                                    | 8/10      |
 | [Apex Legends](https://store.steampowered.com/app/1172470/Apex_Legends/)                         | 8/10      |
 | [Limbo](https://store.steampowered.com/app/48000/LIMBO/)                                         | 8/10      |
 | [Everlasting Summer](https://store.steampowered.com/app/331470/Everlasting_Summer/)              | 8/10      |
@@ -22,4 +24,3 @@
 | [Jump king](https://store.steampowered.com/app/1061090/Jump_King/)                               | 7/10      |
 | [Helltaker](https://store.steampowered.com/app/1289310/Helltaker/)                               | 7/10      |
 | [Postal 2](https://store.steampowered.com/app/223470/POSTAL_2/)                                  | 7/10      |
-
