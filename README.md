@@ -1,5 +1,15 @@
 # Ruminat tech notes
 
+## Prompts
+
+Reusable AI/cursor rules distilled from real project conventions — not generic advice. Copy or reference into any repo.
+
+### TypeScript / web
+
+- [Frontend](./Prompts/frontend.md) — TypeScript: exports, strictness, naming, state, tests
+- [React](./Prompts/react.md) — React: components, hooks, feature modules, SSR
+- [Frontend repo structure](./Prompts/front.repo.md) — Repo layout: tooling, feature folders, readable tests
+
 ## Awesome software/services
 
 ### Cross-platform
@@ -43,4 +53,3 @@ Here's a ready-to-use [start guide](./Windows/FreshStart.md).
 
 - [My favorite fonts](./Random/Fonts.md).
 - [My favorite games](./Random/Games.md).
-- [My prompts](./Prompts/index.md).
