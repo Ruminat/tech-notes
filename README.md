@@ -43,3 +43,4 @@ Here's a ready-to-use [start guide](./Windows/FreshStart.md).
 
 - [My favorite fonts](./Random/Fonts.md).
 - [My favorite games](./Random/Games.md).
+- [My prompts](./Prompts/index.md).
