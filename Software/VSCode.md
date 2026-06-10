@@ -90,6 +90,17 @@
 ]
 ```
 
+**My keyboard shortcuts (Windows-only)**:
+
+```javascript
+[
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.closeOtherEditors"
+  }
+]
+```
+
 **My favorite packages**:
 
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker).
