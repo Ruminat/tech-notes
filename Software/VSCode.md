@@ -73,6 +73,10 @@
     "command": "workbench.action.debug.run"
   },
   {
+    "key": "ctrl+shift+k",
+    "command": "editor.action.deleteLines"
+  },
+  {
     "key": "alt+up",
     "command": "editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
