@@ -24,7 +24,7 @@
       "alt-up": "editor::MoveLineUp",
       "alt-down": "editor::MoveLineDown",
       "shift-alt-down": "editor::DuplicateLineDown",
-      "ctrl-shift-down": "editor::DuplicateLineDown",
+      "ctrl-shift-d": "editor::DuplicateLineDown",
       "ctrl-alt-w": "pane::CloseOtherItems"
     }
   }
