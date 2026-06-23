@@ -69,10 +69,6 @@
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "ctrl+b",
-    "command": "workbench.action.debug.run"
-  },
-  {
     "key": "ctrl+shift+k",
     "command": "editor.action.deleteLines"
   },
@@ -91,6 +87,10 @@
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.files.newUntitledFile"
+  }
 ]
 ```
 
