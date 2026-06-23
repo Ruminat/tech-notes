@@ -88,7 +88,7 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "cmd+n",
+    "key": "ctrl+n",
     "command": "workbench.action.files.newUntitledFile",
     "when": "editorTextFocus"
   }
