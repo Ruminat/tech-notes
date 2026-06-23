@@ -86,10 +86,25 @@
     "key": "shift+alt+down",
     "command": "editor.action.copyLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
+  }
+]
+```
+
+**My keyboard shortcuts (Cursor, macOS)**:
+
+`Cmd+N` should open a new Agent chat in the Agents/Composer UI, and a new untitled file everywhere else. Without the `when` clauses, a global `Cmd+N` binding overrides Cursor's default Agent behavior.
+
+```javascript
+[
+  {
+    "key": "cmd+n",
+    "command": "composer.newAgentChat",
+    "when": "agentsPaneFocused || composerFocused || glassPromptInputFocused || (isGlass && !editorTextFocus) || activeEditor == 'workbench.editor.composer' || focusedView =~ /^workbench.panel.aichat.view/"
   },
   {
-    "key": "ctrl+n",
-    "command": "workbench.action.files.newUntitledFile"
+    "key": "cmd+n",
+    "command": "workbench.action.files.newUntitledFile",
+    "when": "!agentsPaneFocused && !composerFocused && !glassPromptInputFocused && !(isGlass && !editorTextFocus) && activeEditor != 'workbench.editor.composer' && focusedView !~ /^workbench.panel.aichat.view/"
   }
 ]
 ```
