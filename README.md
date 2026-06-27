@@ -51,5 +51,6 @@ Here's a ready-to-use [start guide](./Windows/FreshStart.md).
 
 ## Some other stuff
 
+- [My ~/.bashrc](./Software/Bash.md).
 - [My favorite fonts](./Random/Fonts.md).
 - [My favorite games](./Random/Games.md).
