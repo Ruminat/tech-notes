@@ -1,14 +1,16 @@
 ---
 name: ask-codex-for-review
-description: Automate an independent, read-only code review of the current conversation's work by OpenAI Codex CLI, then evaluate and fix the findings. Use on /ask-codex-for-review or when asked to have Codex review changes, re-review after fixes, or continue a Codex review thread. Supports a path scope, --fresh, and --review-only.
+description: Have OpenAI Codex CLI review this conversation's work, then evaluate and fix the findings. Use on /ask-codex-for-review or when asked to have Codex review, re-review after fixes, or continue a Codex review thread. Supports a path scope, --fresh, and --review-only.
 ---
 
 # ask-codex-for-review
 
 Run one Codex review of the work done in this conversation, then independently
 validate and fix the findings. Codex runs **read-only** via its own CLI auth
-(no API key, no file writes). Review sessions are **persistent per repo + branch
-+ thread**, so repeat invocations continue the same Codex conversation.
+(no API key, no file writes). Review **history** is stored per repo + branch +
+named thread; by default each run is a fresh Codex session with prior findings
+replayed as feedback (native session resume is opt-in), so repeat invocations
+continue the same review thread.
 
 The helper script does the mechanical Codex work (session resume, read-only
 sandbox, safe stdin prompts, history). You do the reasoning: scope, prompt,
@@ -89,9 +91,9 @@ referenced by `status` if you need the exact prior text.)
 node "$SCRIPT" run --prompt-file <file> [--thread <name>] [--fresh] [--scope <path>] [--timeout 600]
 ```
 For a Git repo the script uses `codex exec review` (diff-based, read-only). The
-**scope lives in your prompt prose** (Step 4). Each run is a fresh Codex thread;
-cross-iteration continuity comes from the feedback section you wrote, so always
-include it for iterative reviews. Optional native persistent sessions
+**scope lives in your prompt prose** (Step 4). Each run is a fresh Codex session;
+cross-iteration continuity comes from the feedback section you wrote. Optional
+native persistent sessions
 (`codex exec resume`) are **off by default** (`CODEX_REVIEW_NATIVE_RESUME=1`); the
 script falls back automatically otherwise. Surface any `warnings` to the user.
 

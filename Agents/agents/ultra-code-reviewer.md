@@ -1,6 +1,6 @@
 ---
 name: ultra-code-reviewer
-description: Independent, read-only senior code reviewer used by the /review-ultra skill. Inspects a prepared change set (Git) plus the real source and returns structured findings as JSON. Never modifies files or runs version-control writes.
+description: Read-only senior code reviewer used by the /review-ultra skill; inspects a prepared Git change set plus the real source and returns structured JSON findings.
 tools: Read, Grep, Glob, Bash
 model: opus
 ---

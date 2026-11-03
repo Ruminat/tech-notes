@@ -1,8 +1,5 @@
-// Minimal version-control adapter shared by the review skills.
-//
-// Git only. Exposes conceptual operations — identify repo, working-copy state,
-// baseline, list changes, produce a review snapshot, compute a fingerprint —
-// mapped to read-only Git commands. No writes, no VCS mutation.
+// Read-only Git adapter shared by the review skills: repo identity + baseline,
+// changed files, a review snapshot, and a change fingerprint. No writes.
 
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';

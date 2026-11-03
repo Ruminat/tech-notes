@@ -1,6 +1,6 @@
 ---
 name: review-ultra
-description: Dual-model independent code review of the current task — an isolated Claude reviewer subagent AND OpenAI Codex (persistent read-only session) review the same prepared change snapshot in parallel, then the main session consolidates, validates, and fixes confirmed issues. Use when the user types /review-ultra, or asks for a thorough/dual/ultra review of their changes. Supports --review-only (no fixes), --fresh (new review thread) and a path scope.
+description: Dual-model independent code review — a Claude reviewer subagent and OpenAI Codex review the same change snapshot in parallel, then the main session consolidates and fixes confirmed issues. Use when the user types /review-ultra or asks for a thorough/dual/ultra review of their changes. Supports --review-only, --fresh, and a path scope.
 ---
 
 # review-ultra
@@ -43,16 +43,14 @@ If `vcs` is `null`, there is no Git repo — tell the user and stop (nothing to 
 ## Step 3 — Thread state (for iterative reviews)
 Run `$CR status --thread <name>`. If `exists:true` and not `--fresh`, this is an
 iterative review. Read the prior review from `lastReview.reviewFile` and the stored
-`data` (previous Claude/Codex findings + resolutions). Prepare, SEPARATELY, each
-reviewer's OWN previous findings + what was done about them — you will feed each
-reviewer only its own history, never the other's.
+`data`, and note each reviewer's own previous findings + what was done about them.
 
 ## Step 4 — Launch BOTH reviews in parallel
 Issue both in a SINGLE message (two tool calls) so they run concurrently. Give each
 only the task requirements, architecture constraints, scope, the snapshot, and (if
-iterating) its OWN prior findings + resolutions. Do NOT share one reviewer's findings
-with the other. Do NOT include the implementation author's self-assessment beyond
-what is needed to state the requirements.
+iterating) its OWN prior findings + resolutions — never the other reviewer's. Do NOT
+include the implementation author's self-assessment beyond what is needed to state
+the requirements.
 
 **Claude Reviewer** — Agent tool, `subagent_type: ultra-code-reviewer` (if unavailable
 in this session, use `general-purpose` and state read-only explicitly in the prompt).
@@ -99,8 +97,8 @@ Write a JSON file and run `$CR record --thread <name> --data-file <json>` with
 `{claudeFindings, codexFindings, confirmed, rejected, fixes, remaining}`, plus a
 `--note` summarizing resolutions. This persists both reviewers' findings and your
 resolutions onto the just-created Codex iteration for the next run. (A subsequent
-`/review-ultra` continues this thread; Codex continuity is its persistent session +
-this replayed history, Claude continuity is the summary you feed its fresh subagent.)
+`/review-ultra` continues this thread; Codex continuity comes from the replayed
+history, Claude continuity from the summary you feed its fresh subagent.)
 
 ## Step 9 — Report
 Produce the structured report:
