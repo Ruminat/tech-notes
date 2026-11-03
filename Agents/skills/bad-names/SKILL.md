@@ -12,7 +12,7 @@ Generic names (`isConfigured`, `getById`, `parse`, `serialize`, `handle`, `updat
 
 How to fix:
 - Qualify the name with its domain/entity: `isConfigured` → `isS3Configured`, `getById` → `getProjectById`, `parse` → `parseAvatarSignature`. At the call site the name must read unambiguously.
-- The wider the visibility, the stricter the rule. Exported names must be self-describing. Purely local (non-exported) names get slack: if the immediate context makes it obvious, leave them.
+- The wider the visibility, the stricter the rule. Exported names must be self-describing. Purely local (non-exported) names may stay unchanged if the immediate context makes them obvious.
 - Don't inflate the public surface: don't export private things for convenience; if you do export, give it a domain name.
 - Don't mangle: don't bolt on prefixes mechanically or duplicate what's already clear from the type/module under an explicit namespace import. The goal is readability, not length.
 

@@ -11,7 +11,7 @@ Typical cases: a menu item visible only with edit rights; a specific backend res
 
 ## How
 
-1. **Find the point that decides the state** — the condition, prop, hook, selector, or API response that what you want to show depends on.
+1. **Find what controls the state** — the condition, prop, hook, selector, or API response behind what you want to show.
 2. **Mock only the state you need:**
    - flag/condition: `const canEdit = true;` instead of the real computation;
    - prop/value: hardcode what you need;
