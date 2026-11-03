@@ -6,16 +6,16 @@ disable-model-invocation: true
 
 # bad-names
 
-Поправь плохие, слишком общие имена в коде — прежде всего у того, что видно вне своего файла (`export`, публичные функции/типы/константы). Имя должно само говорить, **к чему оно относится**, без похода в определение.
+Fix bad, overly-generic names in the code — above all for anything visible outside its own file (`export`, public functions/types/constants). The name must say **what it belongs to** on its own, without opening the definition.
 
-Общие имена (`isConfigured`, `getById`, `parse`, `serialize`, `handle`, `update`, `data`, `config`) на уровне `export` видны всему проекту и сливаются в массу одинаковых идентификаторов: по имени не понять, о чём речь, а два разных `getById` в импортах неразличимы.
+Generic names (`isConfigured`, `getById`, `parse`, `serialize`, `handle`, `update`, `data`, `config`) are visible project-wide once `export`ed and blur into a mass of identical identifiers: the name alone doesn't tell you what it's about, and two different `getById` in imports are indistinguishable.
 
-Как править:
-- Квалифицируй имя доменом/сущностью: `isConfigured` → `isS3Configured`, `getById` → `getProjectById`, `parse` → `parseAvatarSignature`. Имя на месте вызова должно читаться однозначно.
-- Чем шире видимость, тем строже правило. Экспортируемое — обязательно самоописательное. Для чисто локальных (не экспортированных) имён послабление: если из ближайшего контекста всё очевидно, можно не трогать.
-- Не раздувай публичную поверхность: не экспортируй приватное ради удобства; если экспортируешь — дай доменное имя.
-- Не уродуй: не лепи префиксы механически и не дубируй то, что и так ясно из типа/модуля при явном неймспейс-импорте. Цель — читаемость, а не длина.
+How to fix:
+- Qualify the name with its domain/entity: `isConfigured` → `isS3Configured`, `getById` → `getProjectById`, `parse` → `parseAvatarSignature`. At the call site the name must read unambiguously.
+- The wider the visibility, the stricter the rule. Exported names must be self-describing. Purely local (non-exported) names get slack: if the immediate context makes it obvious, leave them.
+- Don't inflate the public surface: don't export private things for convenience; if you do export, give it a domain name.
+- Don't mangle: don't bolt on prefixes mechanically or duplicate what's already clear from the type/module under an explicit namespace import. The goal is readability, not length.
 
-Важно: правь **именно свой код** (что ты добавил/менял в этой сессии); чужой/существующий код — только по явной просьбе пользователя.
+Important: fix **your own code** (what you added/changed this session); other/existing code only on the user's explicit request.
 
-Если считаешь, что какое-то общее имя оставить нормально — объясни, почему.
+If you think some generic name is fine to keep — explain why.

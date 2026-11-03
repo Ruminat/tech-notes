@@ -6,10 +6,10 @@ disable-model-invocation: true
 
 # net-back
 
-Сеть вернулась после обрыва. Продолжай ровно с того места, где всё прервалось.
+The network is back after a drop. Resume exactly where things were interrupted.
 
-1. Посмотри последнее, над чем мы работали, и что осталось недоделанным.
-2. Если последнее действие (команда, запись файла, запрос) могло не завершиться из-за обрыва — проверь его результат, прежде чем идти дальше. Не повторяй вслепую операции, которые нельзя безопасно повторить.
-3. Доведи начатую задачу до конца, не переспрашивая разрешения на то, что уже было согласовано.
+1. Look at the last thing we were working on and what's left unfinished.
+2. If the last action (a command, a file write, a request) might not have completed because of the drop — verify its result before moving on. Don't blindly repeat operations that aren't safe to retry.
+3. Finish the task in progress without re-asking permission for what was already agreed.
 
-Если совсем непонятно, на чём мы остановились, — коротко скажи, что видишь, и продолжи с наиболее вероятного места.
+If it's completely unclear where we stopped — briefly say what you see and resume from the most likely point.

@@ -1,28 +1,28 @@
 ---
 name: mock-it
-description: Temporarily mock a hard-to-reach UI state in code, screenshot / visually check it, then delete the mock. Trigger on "замокай", "mock it", "force this state in code".
+description: Temporarily mock a hard-to-reach UI state in code, screenshot / visually check it, then delete the mock. Trigger on "mock it", "fake this state", "force this state in code".
 ---
 
 # mock-it
 
-Если нужное состояние UI не достаётся реальными данными/правами/бэкендом — **замокай его прямо в коде**, сними кадр, **удали мок**.
+If the UI state you need isn't reachable through real data/permissions/backend — **mock it directly in code**, take the shot, **delete the mock**.
 
-Типичные случаи: пункт меню виден только с правами на редактирование; нужен конкретный ответ бэкенда; состояния ошибки / пустоты / загрузки; фича-флаг; редкие граничные данные.
+Typical cases: a menu item visible only with edit rights; a specific backend response; error / empty / loading states; a feature flag; rare edge-case data.
 
-## Как
+## How
 
-1. **Найди точку, которая решает состояние** — условие, проп, хук, селектор или ответ API, от которого зависит то, что хочешь показать.
-2. **Сделай временный мок только для нужного состояния:**
-   - флаг/условие: `const canEdit = true;` вместо реального вычисления;
-   - проп/значение: захардкодь нужное;
-   - хук/селектор: верни фикстуру вместо реальных данных;
-   - ветка рендера: временно убери гейт (`&&`, early-return, permission-check).
-   Обнови страницу — dev-сервер с hot-reload подхватит правку.
-3. **Сними кадр / проверь визуально.**
-4. **Удали мок — сразу.** Откати файл: `git checkout -- <путь>` (или вручную верни как было).
-5. **Убедись, что чисто:** `git status --short` и `git diff -- <путь>` должны быть пустыми по мок-файлам. Мок **никогда** не коммитится и не пушится.
+1. **Find the point that decides the state** — the condition, prop, hook, selector, or API response that what you want to show depends on.
+2. **Mock only the state you need:**
+   - flag/condition: `const canEdit = true;` instead of the real computation;
+   - prop/value: hardcode what you need;
+   - hook/selector: return a fixture instead of real data;
+   - render branch: temporarily drop the gate (`&&`, early-return, permission check).
+   Reload the page — the hot-reload dev server picks up the edit.
+3. **Take the shot / check visually.**
+4. **Delete the mock — immediately.** Revert the file: `git checkout -- <path>` (or restore it by hand).
+5. **Confirm it's clean:** `git status --short` and `git diff -- <path>` must be empty for the mock files. The mock is **never** committed or pushed.
 
-## Правила
+## Rules
 
-- Один мок за раз: замокал → снял → откатил, потом следующий.
-- После отката убедись, что приложение всё ещё собирается. Если dev-сервер показывает **ложный** «Module not found» для существующего файла — это протухший кэш сборки, а не твой мок: очисти кэш сборки и перезапусти dev-сервер.
+- One mock at a time: mock → shoot → revert, then the next one.
+- After reverting, make sure the app still builds. If the dev server shows a **false** "Module not found" for a file that exists, that's a stale build cache, not your mock: clear the build cache and restart the dev server.

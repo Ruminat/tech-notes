@@ -6,9 +6,9 @@ disable-model-invocation: true
 
 # wtf
 
-Пользователь не понял предыдущее объяснение. Объясни заново — **на простом русском языке**.
+The user didn't understand the previous explanation. Explain it again — in **plain, simple language**.
 
-- Коротко, только суть.
-- Без жаргона и без англоязычных терминов там, где есть нормальное слово. Если термин неизбежен — поясни его одной фразой или аналогией из жизни.
-- Представь, что объясняешь умному человеку, который просто не в теме. Не упрощай до детского, но убери всё лишнее.
-- Не вываливай списки команд и код, если об этом не просили, — сначала дай понять *смысл*.
+- Short, just the essence.
+- No jargon where a normal word exists. If a term is unavoidable, explain it in one phrase or a real-life analogy.
+- Imagine explaining to a smart person who's simply not in the field. Don't dumb it down to a child's level, but cut everything extra.
+- Don't dump command lists and code unless asked — get the *meaning* across first.

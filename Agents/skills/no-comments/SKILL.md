@@ -6,4 +6,4 @@ disable-model-invocation: true
 
 # no-comments
 
-Убери свои комментарии и не добавляй новых — код должен быть понятен без них. Комментарий оставляй только для действительно неочевидной логики. Если где-то решил оставить — объясни, почему.
+Remove your comments and don't add new ones — the code should be clear without them. Keep a comment only for genuinely non-obvious logic. If you decide to leave one somewhere, explain why.

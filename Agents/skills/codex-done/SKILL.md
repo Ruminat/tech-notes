@@ -6,9 +6,9 @@ disable-model-invocation: true
 
 # codex-done
 
-1. **Посмотри, что сделал Codex.** `git status` и `git diff` (а также незакоммиченные и свежие коммиты) — пойми, какие изменения появились и зачем.
-2. **Проверь изменения.** Читай изменённый код критически: соответствует ли он задаче, нет ли багов, регрессий, оставленного мусора, несоответствия стилю проекта. При необходимости прогони тесты/линтер/сборку.
-3. **Внеси правки, если согласен с направлением.** Если общий подход верный, но есть шероховатости — поправь их сам. Если подход неверный — не коммить вслепую: объясни проблему и предложи, что делать.
-4. **Закоммить и запушь.** Если текущая ветка — основная (`main`/`master`), сначала создай ветку. Следуй правилам коммитов и PR из CLAUDE.md проекта.
+1. **See what Codex did.** `git status` and `git diff` (plus uncommitted and recent commits) — understand what changed and why.
+2. **Review the changes.** Read the changed code critically: does it match the task, any bugs, regressions, leftover junk, mismatches with project style? Run tests/linter/build if needed.
+3. **Make fixes if you agree with the direction.** If the overall approach is right but rough, polish it yourself. If the approach is wrong — don't commit blindly: explain the problem and propose what to do.
+4. **Commit and push.** If the current branch is the main one (`main`/`master`), create a branch first. Follow the project's commit and PR rules from CLAUDE.md.
 
-Коротко отчитайся: что проверил, что поправил, что закоммитил и запушил.
+Report briefly: what you checked, what you fixed, what you committed and pushed.

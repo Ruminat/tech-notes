@@ -1,36 +1,36 @@
 # Agents
 
-Переносимая (generic, git-only) часть моей конфигурации Claude Code: скиллы, агент, хуки, статус-строка и шаблон настроек. Ничего завязанного на внутреннюю инфраструктуру здесь нет.
+The portable (generic, git-only) part of my Claude Code config: skills, an agent, hooks, a status line, and a settings template. Nothing tied to internal infrastructure.
 
-## Структура
+## Layout
 
 ```
-skills/<name>/SKILL.md   кастомные скиллы
-agents/                  сабагенты
-hooks/tab-title.sh       заголовок вкладки терминала (OSC 2)
-statusline.sh            статус-строка: <session> · <cwd>
-settings.example.json    шаблон ~/.claude/settings.json (мержить, не копировать целиком)
+skills/<name>/SKILL.md   custom skills
+agents/                  subagents
+hooks/tab-title.sh       terminal tab title (OSC 2)
+statusline.sh            status line: <session> · <cwd>
+settings.example.json    template for ~/.claude/settings.json (merge, don't copy wholesale)
 ```
 
-## Скиллы
+## Skills
 
-| Скилл | Вызов | Что делает |
+| Skill | Invocation | What it does |
 |---|---|---|
-| `bad-names` | вручную | переименовать слишком общие идентификаторы |
-| `no-comments` | вручную | убрать бессмысленные комментарии |
-| `wtf` | вручную | переобъяснить простым русским |
-| `net-back` | вручную | продолжить после обрыва сети |
-| `my-skills` | вручную | показать установленные скиллы |
-| `codex-done` | вручную | проверить работу Codex, закоммитить, запушить |
-| `mock-it` | авто | временно замокать состояние UI для скриншота |
-| `ask-codex-for-review` | авто | ревью текущих изменений через Codex CLI |
-| `review-ultra` | авто | двойное ревью (Claude-субагент + Codex) |
+| `bad-names` | manual | rename overly-generic identifiers |
+| `no-comments` | manual | strip pointless comments |
+| `wtf` | manual | re-explain in plain language |
+| `net-back` | manual | resume after a network drop |
+| `my-skills` | manual | list installed skills |
+| `codex-done` | manual | review Codex's work, commit, push |
+| `mock-it` | auto | temporarily mock a UI state for a screenshot |
+| `ask-codex-for-review` | auto | review current changes via Codex CLI |
+| `review-ultra` | auto | dual review (Claude subagent + Codex) |
 
-«вручную» = `disable-model-invocation: true` (только через `/<name>`, модель сама не зовёт).
+"manual" = `disable-model-invocation: true` (only via `/<name>`; the model never calls it itself).
 
-## Установка
+## Install
 
-Скопировать нужное в `~/.claude/` (или симлинками):
+Copy what you want into `~/.claude/` (or symlink it):
 
 ```sh
 ln -s "$PWD/skills/"*        ~/.claude/skills/
@@ -39,9 +39,9 @@ ln -s "$PWD/hooks/tab-title.sh" ~/.claude/hooks/
 ln -s "$PWD/statusline.sh"   ~/.claude/statusline.sh
 ```
 
-Из `settings.example.json` перенести нужные куски в `~/.claude/settings.json`.
+Move the parts you want from `settings.example.json` into `~/.claude/settings.json`.
 
-## Внешние зависимости
+## External dependencies
 
 - `ask-codex-for-review` / `review-ultra` — [OpenAI Codex CLI](https://github.com/openai/codex) (`codex login`), read-only.
-- `settings.example.json` ссылается на плагин `frontend-design` из публичного маркетплейса `anthropics/claude-code`.
+- `settings.example.json` references the `frontend-design` plugin from the public `anthropics/claude-code` marketplace.

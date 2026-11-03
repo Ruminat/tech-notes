@@ -6,29 +6,29 @@ disable-model-invocation: true
 
 # my-skills
 
-Выведи все кастомные (установленные пользователем) скиллы с их промптами.
+List all custom (user-installed) skills with their prompts.
 
-## Что считать «моими» скиллами
+## What counts as "my" skills
 
-Сканируй файловую систему — это установленные/кастомные скиллы, в отличие от встроенных:
+Scan the filesystem — these are installed/custom skills, as opposed to built-in ones:
 
-- Личные (глобальные): `~/.claude/skills/*/SKILL.md`
-- Проектные: `.claude/skills/*/SKILL.md` в текущем проекте (и в родительских каталогах, если есть)
-- Плагины: `~/.claude/plugins/**/skills/*/SKILL.md`
+- Personal (global): `~/.claude/skills/*/SKILL.md`
+- Project: `.claude/skills/*/SKILL.md` in the current project (and parent directories, if any)
+- Plugins: `~/.claude/plugins/**/skills/*/SKILL.md`
 
-Symlink — это тоже установленный скилл, его учитывай. Переходи по ссылке и читай реальный `SKILL.md`.
+A symlink is an installed skill too — follow it and read the real `SKILL.md`.
 
-## Что выводить по каждому скиллу
+## What to show per skill
 
-Прочитай `SKILL.md` каждого скилла и покажи:
+Read each skill's `SKILL.md` and show:
 
-1. **Название** скилла (поле `name` из фронтматтера или имя директории).
-2. **Промпт** — тело `SKILL.md` (всё, что после фронтматтера):
-   - До двух предложений включительно — выведи **дословно**.
-   - Длиннее — **перескажи на русском** в одном-двух предложениях, что скилл делает.
+1. **Name** (the `name` frontmatter field, or the directory name).
+2. **Prompt** — the `SKILL.md` body (everything after the frontmatter):
+   - Up to two sentences — print it **verbatim**.
+   - Longer — **summarize** in one or two sentences what the skill does.
 
-## Формат вывода
+## Output format
 
-Сгруппируй по источнику: Личные / Проектные / Плагины. Строка на скилл: `**название** — промпт (дословно) или краткое описание`.
+Group by source: Personal / Project / Plugins. One line per skill: `**name** — prompt (verbatim) or short description`.
 
-Если скиллов не нашлось ни в одном из мест — так и скажи.
+If no skills are found in any location — say so.
