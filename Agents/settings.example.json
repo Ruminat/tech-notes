@@ -1,0 +1,54 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npm ci *)",
+      "Bash(npx tsc *)",
+      "Bash(npx oxlint *)",
+      "Bash(npx playwright *)",
+      "Read(//tmp/**)"
+    ],
+    "defaultMode": "auto",
+    "additionalDirectories": ["/tmp"]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_response.filePath // .tool_input.file_path // empty'); [ -n \"$f\" ] && cd \"$(dirname \"$f\")\" && npx --no-install prettier --write --ignore-unknown \"$f\" 2>/dev/null || true",
+            "statusMessage": "Prettier"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "$HOME/.claude/hooks/tab-title.sh working" }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "$HOME/.claude/hooks/tab-title.sh done" }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "$HOME/.claude/statusline.sh"
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-code-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-plugins": {
+      "source": { "source": "github", "repo": "anthropics/claude-code" }
+    }
+  }
+}
