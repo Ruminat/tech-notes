@@ -5,15 +5,11 @@ description: Have OpenAI Codex CLI review this conversation's work, then evaluat
 
 # ask-codex-for-review
 
-Run one Codex review of the work done in this conversation, then independently
-validate and fix the findings. Codex runs **read-only** via its own CLI auth
-(no API key, no file writes). Review **history** is stored per repo + branch +
-named thread; by default each run is a fresh Codex session with prior findings
-replayed as feedback (native session resume is opt-in), so repeat invocations
-continue the same review thread.
+Codex runs **read-only** via its own CLI auth (no API key, no file writes); you
+independently validate and fix its findings. Review **history** is stored per repo +
+branch + named thread, so repeat invocations continue the same review thread.
 
-The helper script does the mechanical Codex work (session resume, read-only
-sandbox, safe stdin prompts, history). You do the reasoning: scope, prompt,
+The script does the mechanical Codex work; you do the reasoning — scope, prompt,
 evaluation, fixes.
 
 `SCRIPT` = `~/.claude/skills/ask-codex-for-review/scripts/codex-review.mjs`

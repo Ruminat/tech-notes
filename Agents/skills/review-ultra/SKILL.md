@@ -9,7 +9,7 @@ Two independent reviewers inspect the SAME prepared change snapshot, then you (t
 main session) consolidate and fix.
 
 - **Claude Reviewer** — an isolated subagent (Agent tool), read-only, fresh context.
-- **Codex Reviewer** — `codex-review.mjs` run in a persistent, read-only Codex session.
+- **Codex Reviewer** — `codex-review.mjs` run read-only, with saved review-thread history.
 - **Orchestrator** — you: consolidate, validate, fix, report. Run ONE review pass
   per reviewer and ONE remediation pass. Do not loop.
 
@@ -89,8 +89,8 @@ Before editing, re-check the target files are unchanged since the snapshot (comp
 fingerprint, or inspect). If something changed, reconcile — never blind-overwrite
 another agent's or the user's edits. Then fix only confirmed, in-scope issues,
 preserving architecture and conventions. Do NOT commit, push, merge, or rebase; do
-NOT revert unrelated changes; limit edits to the confirmed problems. Run the relevant
-tests / typecheck / lint for what you changed.
+NOT revert unrelated changes. Run the relevant tests / typecheck / lint for what you
+changed.
 
 ## Step 8 — Record
 Write a JSON file and run `$CR record --thread <name> --data-file <json>` with
